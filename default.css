@@ -9,6 +9,11 @@ h1 {
 	background: transparent;
 	font-family: sans-serif;
 }
+h2 {
+	color: #ff00ff;
+	background: transparent;
+	font-family: sans-serif;
+}
 p{
 	font-family: sans-serif;
 }
@@ -18,4 +23,20 @@ li{
 .container{
 	max-width: 800px;
 	margin: 0 auto;
+}
+table{
+	color: #0000ff;
+	background: #66ff00;
+	font-family: sans-serif;
+	border: ridge 13px #ff0000;
+}
+table th{
+	border: solid 1px #ff0000;
+	background: #ff00ff;
+}
+table td{
+	border: solid 1px #ff0000;
+}
+.underline {
+	text-decoration: underline; 
 }
