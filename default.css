@@ -5,6 +5,8 @@ body {
 	background-size: 1000px;
 }
 h1 {
+	color: #00ff00;
+	background: transparent;
 	font-family: sans-serif;
 }
 p{
