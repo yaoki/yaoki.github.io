@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>DMM エロマンガ</title>
+    <title>DMM 真面目な本</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   </head>
   <body>
 	  <div class="container">
-	    <h1>DMM エロマンガ キーワードサーチ</h1>
+	    <h1>DMM 真面目な本　キーワードサーチ</h1>
 	    <input type="text" class="form-control" id="set_keyword">
 	    <div id="result"></div>
 	</div>
@@ -44,9 +44,9 @@
 
 	    //製品データを取得
 		client.product({
-		  site: "DMM.R18",
-		  service: "ebook",
-		  floor: "comic",
+		  site: "DMM.com",
+		  service: "mono",
+		  floor: "book",
 		  hits: 30,
 		  keyword: keyword,
 		}, function (err, data) {
@@ -55,13 +55,14 @@
 				result += '<div class="media">'
 				+ '<div class="media-left">'
 				+ '<img src="' + item.imageURL.small + '" class="media-object">'
-				+ '<a href="' + item.tachiyomi.URL + '" class="btn btn-block btn-lg btn-primary">立ち読み</a>'
+				// + '<a href="' + item.tachiyomi.URL + '" class="btn btn-block btn-lg btn-primary">立ち読み</a>'
 				+ '</div>'
 				+ '<div class="media-body">'
 				+ '<h6 class="media-heading"><a href="' + item.URL  + '">' + item.title + '</a></h6>'
 				+ '<p>' + item.date + '</p>'
 				+ '<p>' + item.comment + '</p>'
 				+ '</div></div>';
+				console.log(item);
 			});
 			//結果を出力する
 			$('#result').html(result);
