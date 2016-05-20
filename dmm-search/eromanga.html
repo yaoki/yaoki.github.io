@@ -38,7 +38,8 @@
     });
 
     function dmmsearch(client, key){
- 
+    	console.log(key);
+
 	    var keyword = key;
 
 
@@ -50,6 +51,8 @@
 		  hits: 30,
 		  keyword: keyword,
 		}, function (err, data) {
+		  console.log(err);
+		  console.log(data);
 		  var result ='';
 			$.each(data.items, function(index, item){
 				result += '<div class="media">'
