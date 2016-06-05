@@ -48,8 +48,13 @@ footer h1,
 		width: 100%;
 	}
 	header {
-		padding-left: 1%;
-		width: 99%;
+		padding-left: 2%;
+		width: 98%;
+	}
+	header img {
+		width: 100%;
+		max-width: 100%;
+		height: auto;
 	}
 	#notable-book img{
 		width: 100%;
