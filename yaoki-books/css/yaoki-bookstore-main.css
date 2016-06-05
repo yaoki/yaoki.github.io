@@ -47,6 +47,10 @@ footer h1,
 	.container{
 		width: 100%;
 	}
+	header {
+		padding-left: 1%;
+		width: 99%;
+	}
 	#notable-book img{
 		width: 100%;
 		max-width: 100%;
