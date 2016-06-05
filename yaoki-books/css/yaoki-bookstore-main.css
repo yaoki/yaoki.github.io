@@ -94,13 +94,27 @@ footer h1,
 		max-width: 100%;
 		height: auto;
 	}
+	.sub-display h2 {
+		font-size: 1.5em;
+		line-height: 2.5em;
+	}
+	.sub-display ul li {
+		margin-bottom: 2em;
+	}
 	.sub-display ul li img {
 		width: 100%;
 		min-width: 100%;
 	}
+	.show-more {
+		display: block;
+		text-align: right;
+	}
 	footer {
 		font-size: 1.2em;
 		line-height: 2em;
+	}
+	.pc {
+		display: none;
 	}
 	#misc-info {
 		padding-top: 40px;
@@ -231,6 +245,9 @@ footer h1,
 		font-weight: bold;
 		text-align: right;
 		margin-top: 0.5em;
+	}
+	.smartphone {
+		display: none;
 	}
 	footer {
 		clear: both;
