@@ -71,6 +71,10 @@ footer h1,
 		max-width: 100%;
 		height: auto;
 	}
+	footer {
+		font-size: 1.2em;
+		line-height: 2em;
+	}
 }
 
 
