@@ -35,8 +35,8 @@ aside h1,
 footer h1,
 .hidden,
 #contents section h1,
-#contents section p,
-.notable-book h1{
+#notable-book p,
+#notable-book h1{
 	display: none;
 }
 
