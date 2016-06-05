@@ -36,7 +36,8 @@ footer h1,
 .hidden,
 #contents section h1,
 #notable-book p,
-#notable-book h1{
+#notable-book h1,
+#ads ul li span{
 	display: none;
 }
 
@@ -164,8 +165,9 @@ footer h1,
 	}
 	/*商品カタログのペイン*/
 	#catalog {
-		width: 72.9591%;
 		float: left;
+		width: 70.9591%;
+		margin-right: 2%;
 		overflow: hidden;
 	}
 	/*広告ペイン*/
@@ -173,6 +175,58 @@ footer h1,
 		width: 27.04%;
 		float: left;
 		overflow: hidden;
+	}
+	#ads ul li {
+		display: block;
+		width: 100%;
+		height: 155px;
+		text-align: center;
+		padding-top: 50%;
+		margin-bottom: 1em;
+		background: #CCCCCC;
+	}
+	#ads ul li a{
+		color: #FF0000;		
+	}
+	.sub-display {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 2.4em;
+	}
+	.sub-display h2{
+		float: left;
+		width: 70%;
+		font-size: 2em;
+		line-height: 2em;
+	}
+	.sub-display ul {
+		clear: both;
+		overflow: hidden;
+	}
+	.sub-display ul li{
+		display: block;
+		width: 25%;
+		max-width: 25%;
+		height: auto;
+		float: left;
+	}
+	.sub-display ul li img{
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+	.book-face {
+		min-height: 260px;
+
+	}
+	.show-more {
+		float: left;
+		display: block;
+		width: 30%;
+		font-size: 1.2em;
+		font-weight: bold;
+		text-align: right;
+		margin-top: 0.5em;
 	}
 	footer {
 		clear: both;
@@ -227,6 +281,12 @@ nav,footer {
 	background: #FFFFFF;
 }
 
+.sub-display ul li a,
+.sub-display ul li a:link,
+.sub-display ul li a:visited,
+.sub-display ul li a:active {
+	color: #0000FF;
+}
 .show-more {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -239,6 +299,7 @@ footer a:active {
 	vertical-align: middle;
 	color: #797380;
 }
+#copyright {
+	color: #AFABB3;
 
-
-
+}
