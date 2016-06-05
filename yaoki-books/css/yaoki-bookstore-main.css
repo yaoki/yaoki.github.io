@@ -31,6 +31,40 @@ ol,ul{
 		margin: 0 auto;
 
 		}
+	#notable-book{
+		width: 100%;
+		margin: 0;
+	}
+	#catalog {
+		width: 70%;
+		float: left;
+		overflow: hidden;
+	}
+	#ads {
+		width: 30%;
+		float: left;
+		overflow: hidden;
+	}
+	footer {
+		clear: both;
+	}
+	#misc-info {
+		width: 100%;
+		padding-top: 40px;
+		overflow: hidden;
+	}
+	#misc-info ul{
+		width: 50%;
+		float: left;
+		overflow: hidden;
+	}
+	#copyright {
+		width: 100%;
+		margin-top: 40px;
+		margin-bottom: 0;
+		padding-bottom: 20px;
+		clear: both;
+	}
 }
 
 header{
@@ -45,7 +79,23 @@ nav,footer {
 	background: #F1E5FF;
 }
 
-.contents {
+#contents {
 	color: #000000;
 	background: #FFFFFF;
 }
+
+
+/*デザインの都合で消す要素*/
+header h1,
+nav h1,
+aside h1,
+footer h1,
+.hidden,
+#contents section h1,
+#contents section p,
+.notable-book h1{
+	display: none;
+}
+
+
+
