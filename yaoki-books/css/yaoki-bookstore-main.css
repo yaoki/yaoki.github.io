@@ -34,14 +34,17 @@ ol,ul{
 	#notable-book{
 		width: 100%;
 		margin: 0;
+		padding: 0;
 	}
+	/*商品カタログのペイン*/
 	#catalog {
-		width: 70%;
+		width: 72.9591%;
 		float: left;
 		overflow: hidden;
 	}
+	/*広告ペイン*/
 	#ads {
-		width: 30%;
+		width: 27.04%;
 		float: left;
 		overflow: hidden;
 	}
