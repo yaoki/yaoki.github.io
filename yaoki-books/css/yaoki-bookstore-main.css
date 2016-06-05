@@ -1,0 +1,51 @@
+body{
+	margin: 0;
+	padding: 0;
+	color: #000000;
+	background-color: #ffffff;
+	font-size: 14px;
+	font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dt,dd{
+	padding: 0;
+	margin: 0;
+}
+
+ol,ul{
+	list-style-type: none;
+}
+
+
+
+/* サイト全体のサイズを指定 */
+@media (max-width: 479px){
+	/*スマートフォン向け*/
+	.container{
+		width: 100%;
+	}
+}
+@media (min-width: 480px){
+	/*パソコン向け*/
+	.container{
+		width: 980px;
+		margin: 0 auto;
+
+		}
+}
+
+header{
+	width: 100%;
+	padding-top: 50px;
+	color: #FFFFFF;
+	background-color: #1B1464;
+}
+
+nav,footer {
+	color: #000000;
+	background: #F1E5FF;
+}
+
+.contents {
+	color: #000000;
+	background: #FFFFFF;
+}
