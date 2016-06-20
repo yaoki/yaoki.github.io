@@ -1,326 +1,266 @@
-body{
-	margin: 0;
-	padding: 0;
-	color: #000000;
-	background-color: #ffffff;
-	font-size: 14px;
-	font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif;
-}
-h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dt,dd{
-	padding: 0;
-	margin: 0;
-}
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-family: 'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, 'メイリオ', sans-serif; }
 
-ol,ul{
-	list-style-type: none;
-}
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dt, dd {
+  padding: 0;
+  margin: 0; }
 
+ol, ul {
+  list-style-type: none; }
 
 /*アンカーの下線を消す*/
 a,
 a:link,
 a:visited,
 a:active {
-	text-decoration: none;
-	color: #000000;
-}
+  text-decoration: none;
+  color: #000000; }
+
 a:hover {
-	text-decoration: underline;
-}
+  text-decoration: underline; }
 
 /*デザインの都合で消す要素*/
-header h1 span,
+.heading-1__span--hidden,
 nav h1,
 aside h1,
 footer h1,
-.hidden,
+.heading-1--hidden,
 #contents section h1,
-#notable-book p,
-#notable-book h1,
-#ads ul li span{
-	display: none;
-}
-
-
+.notable-book p,
+.notable-book h1,
+#ads ul li span {
+  display: none; }
 
 /* サイト全体のサイズを指定 */
-@media (max-width: 479px){
-	/*スマートフォン向け*/
-	.container{
-		padding-left: 5%;
-		padding-right: 5%;
-		width: 90%;
-	}
-	.container-fluid {
-		padding: 0;
-		width: 100%;
-	}
-	header img {
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-	}
-	nav ul {
-		font-weight: bold;
-		margin: 0;
-		padding: 0;
-		padding-bottom: 0.5em;
-		width: 100%;
-		height: auto;
-		overflow: hidden;
-	}
-	nav ul li {
-		float: left;
-		width: 50%;
-		height: 2.5em;
-		overflow: hidden;
-	}
-	nav ul li a{
-		display: block;
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-		padding-top: 1em;
-	}
-	#notable-book {
-		padding-left: 0;
-		padding-right: 0;
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-	}
-	#notable-book img{
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-	}
-	.sub-display h2 {
-		font-size: 1.5em;
-		line-height: 2.5em;
-	}
-	.sub-display ul li {
-		margin-bottom: 2em;
-	}
-	.sub-display ul li img {
-		width: 100%;
-		min-width: 100%;
-	}
-	.show-more {
-		display: block;
-		text-align: right;
-	}
-	footer {
-		font-size: 1.2em;
-		line-height: 2em;
-	}
-	.pc {
-		display: none;
-	}
-	#misc-info {
-		padding-top: 40px;
-		padding-bottom: 40px;
-	}
-}
+@media (max-width: 479px) {
+  /*スマートフォン向け*/
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%; }
+  .container--fluid {
+    padding: 0;
+    width: 100%; }
+  header img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+  nav ul {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5em;
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
+  nav ul li {
+    float: left;
+    width: 50%;
+    height: 2.5em;
+    overflow: hidden; }
+  nav ul li a {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding-top: 1em; }
+  .notable-book {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+  .notable-book img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+  .sub-display h2 {
+    font-size: 1.5em;
+    line-height: 2.5em; }
+  .sub-display ul li {
+    margin-bottom: 2em; }
+  .sub-display ul li img {
+    width: 100%;
+    min-width: 100%; }
+  .show-more {
+    display: block;
+    text-align: right; }
+  footer {
+    font-size: 1.2em;
+    line-height: 2em; }
+  .pc {
+    display: none; }
+  #misc-info {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
 
-
-
-
-
-@media (min-width: 480px){
-	/*パソコン向け*/
-	.container, .container-fluid {
-		width: 980px;
-		margin: 0 auto;
-
-		}
-	header {
-		width: 100%;
-		overflow: hidden;
-	}
-	header h1{
-		width: 28.4693%;
-		float: left; 
-	}
-	header p {
-		float: left;
-		width: 71.53%;
-		height: auto;
-	}
-	nav {
-		height: 62px;
-	}
-	nav ul {
-		width: 100%;
-		overflow: hidden;
-	}
-	nav ul li {
-		font-size: 18px;
-		margin:0;
-		padding: 0;
-	}
-	nav ul li a{
-		display: block;
-		float: left;
-		font-size: 18px;
-		font-weight: bold;
-		margin-left: 5.3%;
-		margin-top: 16px;
-		height: 62px;
-	}
-	nav ul li:first-child a{
-		margin-left: 0;
-	}
-	#notable-book{
-		width: 100%;
-		margin: 0;
-		padding: 0;
-	}
-	#notable-book img{
-		width: 100%;
-		max-width: 100%;
-		height: auto;
-	}
-	/*商品カタログのペイン*/
-	#catalog {
-		float: left;
-		width: 70.9591%;
-		margin-right: 2%;
-		overflow: hidden;
-	}
-	/*広告ペイン*/
-	#ads {
-		width: 27.04%;
-		margin-top: 10px;
-		float: left;
-		overflow: hidden;
-	}
-	#ads ul li {
-		width: 100%;
-		text-align: center;
-		margin-bottom: 1em;
-		background: #CCCCCC;
-	}
-	#ads ul li a{
-		display: block;
-		padding-top: 50%;
-		padding-bottom: 50%;
-		color: #FF0000;		
-	}
-	.sub-display {
-		width: 100%;
-		overflow: hidden;
-		margin-bottom: 2.4em;
-	}
-	.sub-display h2{
-		float: left;
-		width: 70%;
-		font-size: 2em;
-		line-height: 2em;
-	}
-	.sub-display ul {
-		clear: both;
-		overflow: hidden;
-	}
-	.sub-display ul li{
-		display: block;
-		width: 25%;
-		max-width: 25%;
-		height: auto;
-		float: left;
-	}
-	.sub-display ul li img{
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-	.book-face {
-		min-height: 260px;
-
-	}
-	.show-more {
-		float: left;
-		display: block;
-		width: 30%;
-		font-size: 1.2em;
-		font-weight: bold;
-		text-align: right;
-		margin-top: 0.5em;
-	}
-	.smartphone {
-		display: none;
-	}
-	footer {
-		clear: both;
-	}
-	#misc-info {
-		width: 100%;
-		padding-top: 40px;
-		overflow: hidden;
-	}
-	#misc-info ul{
-		width: 50%;
-		float: left;
-		overflow: hidden;
-	}
-	#copyright {
-		width: 100%;
-		margin-top: 40px;
-		margin-bottom: 0;
-		padding-bottom: 20px;
-		clear: both;
-	}
-}
-
+@media (min-width: 480px) {
+  /*パソコン向け*/
+  .container, .container--fluid {
+    width: 980px;
+    margin: 0 auto; }
+  header {
+    width: 100%;
+    overflow: hidden; }
+  header h1 {
+    width: 28.4693%;
+    float: left; }
+  header p {
+    float: left;
+    width: 71.53%;
+    height: auto; }
+  nav {
+    height: 62px; }
+  nav ul {
+    width: 100%;
+    overflow: hidden; }
+  nav ul li {
+    font-size: 18px;
+    margin: 0;
+    padding: 0; }
+  nav ul li a {
+    display: block;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5.3%;
+    margin-top: 16px;
+    height: 62px; }
+  nav ul li:first-child a {
+    margin-left: 0; }
+  .notable-book {
+    width: 100%;
+    margin: 0;
+    padding: 0; }
+  .notable-book img {
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+  /*商品カタログのペイン*/
+  .catalog {
+    float: left;
+    width: 70.9591%;
+    margin-right: 2%;
+    overflow: hidden; }
+  /*広告ペイン*/
+  #ads {
+    width: 27.04%;
+    margin-top: 10px;
+    float: left;
+    overflow: hidden; }
+  #ads ul li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+    background: #CCCCCC; }
+  #ads ul li a {
+    display: block;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    color: #FF0000; }
+  .sub-display {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2.4em; }
+  .sub-display h2 {
+    float: left;
+    width: 70%;
+    font-size: 2em;
+    line-height: 2em; }
+  .sub-display ul {
+    clear: both;
+    overflow: hidden; }
+  .sub-display ul li {
+    display: block;
+    width: 25%;
+    max-width: 25%;
+    height: auto;
+    float: left; }
+  .sub-display ul li img {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%; }
+  .book-face {
+    min-height: 260px; }
+  .show-more {
+    float: left;
+    display: block;
+    width: 30%;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 0.5em; }
+  .smartphone {
+    display: none; }
+  footer {
+    clear: both; }
+  #misc-info {
+    width: 100%;
+    padding-top: 40px;
+    overflow: hidden; }
+  #misc-info ul {
+    width: 50%;
+    float: left;
+    overflow: hidden; }
+  #copyright {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    clear: both; } }
 
 /*スクリーンサイズに関わらない共通の要素*/
 header {
-	width: 100%;
-	padding-top: 38px;
-	padding-bottom: 38px;
-	color: #FFFFFF;
-	background-color: #1B1464;
-}
+  width: 100%;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  color: #FFFFFF;
+  background-color: #1B1464; }
+
 header a,
 header a:link,
 header a:visited,
 header a:active {
-	color: #FFFFFF;
-	font-weight: bold;
-}
-nav,footer {
-	color: #000000;
-	background: #F1E5FF;
-}
+  color: #FFFFFF;
+  font-weight: bold; }
+
+nav, footer {
+  color: #000000;
+  background: #F1E5FF; }
+
 #icon-cart {
-	vertical-align: middle;
-	width: 1em;
-	max-width: 1em;
-	height: auto;
-}
+  vertical-align: middle;
+  width: 1em;
+  max-width: 1em;
+  height: auto; }
+
 #contents {
-	color: #000000;
-	background: #FFFFFF;
-}
+  color: #000000;
+  background: #FFFFFF; }
 
 .sub-display ul li a,
 .sub-display ul li a:link,
 .sub-display ul li a:visited,
 .sub-display ul li a:active {
-	color: #0000FF;
-}
+  color: #0000FF; }
+
 .show-more {
-	font-size: 1.2em;
-	font-weight: bold;
-}
+  font-size: 1.2em;
+  font-weight: bold; }
+
 footer a,
 footer a:link,
 footer a:visited,
 footer a:active {
-	line-height: 2em;
-	vertical-align: middle;
-	color: #797380;
-}
-#copyright {
-	color: #AFABB3;
+  line-height: 2em;
+  vertical-align: middle;
+  color: #797380; }
 
-}
+#copyright {
+  color: #AFABB3; }
