@@ -22,43 +22,36 @@
     <!-- jQuery first, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
-    <script src="dmm.js"></script>
     <script>
-    var client = new dmm.Client({
-	    api_id: "HWpNtF4Bn0HyHmQaGVxC",
-	    affiliate_id: "pinktraktor-990"
-	});
-	//フロア
-	client.floor(function(err, data){
-	  console.log(data);
-	});
     $('#set_keyword').on('keyup', function(){
-    	var key = $(this).val();
-		dmmsearch( client, $(this).val() );
+		dmmsearch($(this).val());
     });
 
-    function dmmsearch(client, key){
-    	console.log(key);
-
-	    var keyword = key;
-
-
+    function dmmsearch(keyword){
 	    //製品データを取得
-		client.product({
-		  site: "DMM.R18",
-		  service: "ebook",
-		  floor: "comic",
-		  hits: 30,
-		  keyword: keyword,
-		}, function (err, data) {
-		  console.log(err);
-		  console.log(data);
-		  var result ='';
-			$.each(data.items, function(index, item){
+		$.ajax({
+		  url: 'https://api.dmm.com/affiliate/v3/ItemList',
+		  dataType: 'jsonp',
+		  data: {
+		    api_id: 'HWpNtF4Bn0HyHmQaGVxC',
+		    affiliate_id: 'pinktraktor-990',
+		    site: 'DMM.R18',
+		    service: 'ebook',
+		    floor: 'comic',
+		    hits: 30,
+		    keyword: keyword,
+		    output: 'json'
+		  },
+		  success: function(data) {
+		    var result = '';
+			$.each(data.result.items, function(index, item){
+				var tachiyomi = (item.tachiyomi && item.tachiyomi.URL)
+				  ? '<a href="' + item.tachiyomi.URL + '" class="btn btn-block btn-lg btn-primary">立ち読み</a>'
+				  : '';
 				result += '<div class="media">'
 				+ '<div class="media-left">'
 				+ '<img src="' + item.imageURL.small + '" class="media-object">'
-				+ '<a href="' + item.tachiyomi.URL + '" class="btn btn-block btn-lg btn-primary">立ち読み</a>'
+				+ tachiyomi
 				+ '</div>'
 				+ '<div class="media-body">'
 				+ '<h6 class="media-heading"><a href="' + item.URL  + '">' + item.title + '</a></h6>'
@@ -68,8 +61,11 @@
 			});
 			//結果を出力する
 			$('#result').html(result);
-
-		  });
+		  },
+		  error: function(xhr, status, err) {
+		    console.log('API error:', status, err);
+		  }
+		});
     }
   </script>
   </body>
