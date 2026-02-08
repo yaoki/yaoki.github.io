@@ -12,6 +12,7 @@
   <body>
 	  <div class="container">
 	    <h1>DMM API R18 キーワードサーチ</h1>
+		<p>Adガードを無効にしてください。</p>
 	    <input type="text" class="form-control" id="set_keyword">
 	    <div id="result"></div>
 	</div>
@@ -48,7 +49,7 @@
 				result += '<div class="media">'
 				+ '<div class="media-left"><img src="' + item.imageURL.small + '" class="media-object"></div>'
 				+ '<div class="media-body">'
-				+ '<h6 class="media-heading"><a href="' + item.URL  + '">' + item.title + '</a></h6>'
+				+ '<h6 class="media-heading"><a href="' + item.URL  + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a></h6>'
 				+ '<p>' + item.date + '</p>'
 				+ '<p>' + item.comment + '</p>'
 				+ '</div></div>';

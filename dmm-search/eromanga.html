@@ -12,6 +12,7 @@
   <body>
 	  <div class="container">
 	    <h1>DMM エロマンガ キーワードサーチ</h1>
+		<p>Adガードを無効にしてください。</p>
 	    <input type="text" class="form-control" id="set_keyword">
 	    <div id="result"></div>
 	</div>
@@ -46,7 +47,7 @@
 		    var result = '';
 			$.each(data.result.items, function(index, item){
 				var tachiyomi = (item.tachiyomi && item.tachiyomi.URL)
-				  ? '<a href="' + item.tachiyomi.URL + '" class="btn btn-block btn-lg btn-primary">立ち読み</a>'
+				  ? '<a href="' + item.tachiyomi.URL + '" target="_blank" rel="noopener noreferrer" class="btn btn-block btn-lg btn-primary">立ち読み</a>'
 				  : '';
 				result += '<div class="media">'
 				+ '<div class="media-left">'
@@ -54,7 +55,7 @@
 				+ tachiyomi
 				+ '</div>'
 				+ '<div class="media-body">'
-				+ '<h6 class="media-heading"><a href="' + item.URL  + '">' + item.title + '</a></h6>'
+				+ '<h6 class="media-heading"><a href="' + item.URL  + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a></h6>'
 				+ '<p>' + item.date + '</p>'
 				+ '<p>' + item.comment + '</p>'
 				+ '</div></div>';
