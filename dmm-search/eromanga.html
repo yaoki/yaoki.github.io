@@ -57,7 +57,7 @@
 				+ '<div class="media-body">'
 				+ '<h6 class="media-heading"><a href="' + item.URL  + '" target="_blank" rel="noopener noreferrer">' + item.title + '</a></h6>'
 				+ '<p>' + item.date + '</p>'
-				+ '<p>' + item.prices.price + '</p>'
+				+ '<p>' + Number(item.prices.price).toLocaleString() + '円（税込）' + '</p>'
 				+ '</div></div>';
 			});
 			//結果を出力する
